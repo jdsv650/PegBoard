@@ -13,6 +13,10 @@
 		1AEF988E1B7DEDDE00C1B963 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AEF988D1B7DEDDE00C1B963 /* Images.xcassets */; };
 		1AEF98911B7DEDDE00C1B963 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1AEF988F1B7DEDDE00C1B963 /* LaunchScreen.xib */; };
 		1AEF989D1B7DEDDE00C1B963 /* PegBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF989C1B7DEDDE00C1B963 /* PegBoardTests.swift */; };
+		1AEF98A71B7DF08100C1B963 /* wood2.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AEF98A61B7DF08100C1B963 /* wood2.png */; };
+		1AEF98AD1B7DF71E00C1B963 /* tee.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AEF98AC1B7DF71E00C1B963 /* tee.png */; };
+		1AEF98AF1B7DF77200C1B963 /* blackCircle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AEF98AE1B7DF77200C1B963 /* blackCircle.png */; };
+		1AEF98B11B7E98B800C1B963 /* PegBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEF98B01B7E98B800C1B963 /* PegBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		1AEF98961B7DEDDE00C1B963 /* PegBoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PegBoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AEF989B1B7DEDDE00C1B963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AEF989C1B7DEDDE00C1B963 /* PegBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PegBoardTests.swift; sourceTree = "<group>"; };
+		1AEF98A61B7DF08100C1B963 /* wood2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wood2.png; sourceTree = "<group>"; };
+		1AEF98AC1B7DF71E00C1B963 /* tee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tee.png; sourceTree = "<group>"; };
+		1AEF98AE1B7DF77200C1B963 /* blackCircle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackCircle.png; sourceTree = "<group>"; };
+		1AEF98B01B7E98B800C1B963 /* PegBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PegBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				1AEF98861B7DEDDE00C1B963 /* AppDelegate.swift */,
+				1AEF98B01B7E98B800C1B963 /* PegBoard.swift */,
 				1AEF98881B7DEDDE00C1B963 /* ViewController.swift */,
 				1AEF988A1B7DEDDE00C1B963 /* Main.storyboard */,
 				1AEF988D1B7DEDDE00C1B963 /* Images.xcassets */,
@@ -90,6 +99,9 @@
 		1AEF98841B7DEDDD00C1B963 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1AEF98AE1B7DF77200C1B963 /* blackCircle.png */,
+				1AEF98A61B7DF08100C1B963 /* wood2.png */,
+				1AEF98AC1B7DF71E00C1B963 /* tee.png */,
 				1AEF98851B7DEDDE00C1B963 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -193,8 +205,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AEF988C1B7DEDDE00C1B963 /* Main.storyboard in Resources */,
+				1AEF98AF1B7DF77200C1B963 /* blackCircle.png in Resources */,
 				1AEF98911B7DEDDE00C1B963 /* LaunchScreen.xib in Resources */,
 				1AEF988E1B7DEDDE00C1B963 /* Images.xcassets in Resources */,
+				1AEF98A71B7DF08100C1B963 /* wood2.png in Resources */,
+				1AEF98AD1B7DF71E00C1B963 /* tee.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AEF98B11B7E98B800C1B963 /* PegBoard.swift in Sources */,
 				1AEF98891B7DEDDE00C1B963 /* ViewController.swift in Sources */,
 				1AEF98871B7DEDDE00C1B963 /* AppDelegate.swift in Sources */,
 			);
