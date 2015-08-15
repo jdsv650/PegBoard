@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet var Holes: [UIButton]!
     
     var pegBoard = PegBoard()
+    var isPegSelected = false
+    var selectedPegTag = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,8 +47,61 @@ class ViewController: UIViewController {
     
     @IBAction func resetPressed(sender: UIButton) {
         
+        isPegSelected = false
         pegBoard.resetBoard()
         drawBoard()
+    }
+    
+    
+    @IBAction func pegPressed(sender: UIButton) {
+        
+        var status = pegBoard.getHoleStatus(sender.tag)
+        
+        // first if we tap same peg deselct it -- don't move this
+        if isPegSelected == true && selectedPegTag == sender.tag
+        {
+            sender.setTitle("", forState: UIControlState.Normal)
+            isPegSelected = false
+            return
+        }
+        
+        // select a peg not open hole
+        if isPegSelected == false && status != PegBoard.Hole.Open
+        {
+            sender.setTitle("X", forState: UIControlState.Normal)
+            
+            isPegSelected = true
+            selectedPegTag = sender.tag
+        }
+        
+        // try to move to filled hole
+        if isPegSelected == true && status == PegBoard.Hole.Filled
+        {
+            println("Slot not empty")
+            isPegSelected == false
+            
+        }
+        
+        // try to move to filled hole
+        if isPegSelected == true && status == PegBoard.Hole.Open
+        {
+            println("Open check for valid move")
+            if pegBoard.checkForValidDiagonalMove(selectedPegTag, finishTagnumber: sender.tag)
+            {
+                pegBoard.removePeg(selectedPegTag)
+                pegBoard.updateHoleStatus(sender.tag, status: PegBoard.Hole.Filled)
+                pegBoard.removeJumpedPeg(selectedPegTag, finishTagnumber: sender.tag)
+                isPegSelected = false
+                drawBoard()
+            }
+            else
+            {
+                println("invalid move")
+            }
+            
+        }
+        
+        
     }
 
 }
